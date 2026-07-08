@@ -19,8 +19,8 @@ export const profile = {
   resumeUrl: '/resume.pdf',
 
   // Deployed site URL — used for canonical + Open Graph tags.
-  // TODO(Chibwe): update once you have a custom domain (e.g. https://chibwe.dev)
-  siteUrl: 'https://chibwe-musendeka.netlify.app',
+  // TODO(Chibwe): update if you add a custom domain (e.g. https://chibwe.dev)
+  siteUrl: 'https://chibwem.netlify.app',
 } as const;
 
 export const navItems = [

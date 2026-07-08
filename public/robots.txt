@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chibwe-musendeka.netlify.app/sitemap.xml
+Sitemap: https://chibwem.netlify.app/sitemap.xml
