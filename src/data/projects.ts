@@ -1,12 +1,13 @@
 export interface Project {
   name: string;
   tagline: string; // one-line snapshot: what it is + who it's for
+  role?: string; // my contribution, when I wasn't the sole builder (e.g. QA)
   problem: string;
   approach: string;
   solution: string;
   impact: string;
   stack: string[];
-  image: string; // path under /public
+  image?: string; // path under /public — screenshots added later
   liveUrl?: string;
   repoUrl?: string;
   featured?: boolean;
@@ -51,14 +52,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    name: 'WorkCom Connect — WCFB ERP',
-    tagline: 'A QA case study: quality assurance for an integrated enterprise platform.',
+    name: 'WorkCom Connect (WCFB ERP)',
+    tagline:
+      'A live enterprise ERP platform unifying HR, Payroll, Finance, Procurement, and CRM.',
+    role: 'QA & IT Support Specialist',
     problem:
-      'An ERP unifying HR, Payroll, Finance, Procurement, and CRM needed rigorous validation before and after go-live to protect data integrity.',
+      'This integrated ERP needed rigorous validation and reliable support before and after go-live to protect data integrity across every business module.',
     approach:
       'Authored structured test cases and scenarios across integrated workflows, coordinated UAT sessions, and validated reports with SQL data checks.',
     solution:
-      'Ran end-to-end QA and post-go-live support: tracked and documented defects with clear reproduction steps and severity, and drove them to resolution.',
+      'Delivered end-to-end QA and post-go-live support: tracked and documented defects with clear reproduction steps and severity, and drove them to resolution with the dev team.',
     impact:
       'Improved system reliability and user satisfaction, and streamlined workflows by surfacing and escalating defects before they reached end-users.',
     stack: ['QA / Testing', 'Test cases', 'UAT', 'SQL', 'Defect tracking'],

@@ -4,15 +4,15 @@ export const profile = {
   headline: 'Full-Stack Developer with a QA & IT-support backbone',
   // One-line value proposition
   tagline:
-    'I build fast, accessible web apps with React — and because I came up through QA and IT support, I know how to test, debug, and support them in production.',
+    'I build fast, accessible web apps with React and because I came up through QA and IT support, I know how to test, debug, and support them in production.',
   location: 'Ndola, Zambia',
   email: 'chibwemusendeka@gmail.com',
   phone: '+260 967 528 035',
 
   // TODO(Chibwe): replace with your real profile URLs
   socials: {
-    github: 'https://github.com/your-username',
-    linkedin: 'https://www.linkedin.com/in/your-handle',
+    github: 'https://github.com/Chibs5',
+    linkedin: 'https://www.linkedin.com/in/chibwe-musendeka-25aa0220a',
   },
 
   // TODO(Chibwe): drop your résumé PDF into /public/resume.pdf

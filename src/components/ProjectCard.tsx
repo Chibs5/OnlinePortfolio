@@ -2,31 +2,11 @@ import { Github, ExternalLink } from 'lucide-react';
 import type { Project } from '@/data/projects';
 
 export function ProjectCard({ project }: { project: Project }) {
-  const { name, tagline, problem, approach, solution, impact, stack, image, liveUrl, repoUrl } =
+  const { name, tagline, role, problem, approach, solution, impact, stack, liveUrl, repoUrl } =
     project;
 
   return (
-    <article className="group grid gap-6 rounded-xl border border-transparent p-4 transition-colors hover:border-navy-700 hover:bg-navy-800/50 sm:grid-cols-[220px_1fr] sm:gap-7 sm:p-6">
-      {/* Screenshot / GIF (playbook: each project needs a visual) */}
-      <div className="relative overflow-hidden rounded-lg border border-navy-700">
-        <img
-          src={image}
-          alt={`${name} screenshot`}
-          loading="lazy"
-          width={440}
-          height={280}
-          className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          onError={(e) => {
-            const el = e.currentTarget as HTMLImageElement;
-            el.style.display = 'none';
-            el.nextElementSibling?.classList.remove('hidden');
-          }}
-        />
-        <div className="hidden aspect-[16/10] w-full items-center justify-center bg-navy-800 p-4 text-center text-xs text-ink-400">
-          Add {image}
-        </div>
-      </div>
-
+    <article className="group rounded-xl border border-transparent p-4 transition-colors hover:border-navy-700 hover:bg-navy-800/50 sm:p-6">
       <div>
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-lg font-semibold text-ink-100">{name}</h3>
@@ -57,6 +37,12 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <p className="mt-1 text-sm text-ink-300">{tagline}</p>
+
+        {role ? (
+          <p className="mono mt-2 text-xs text-ink-400">
+            My role — <span className="text-accent">{role}</span>
+          </p>
+        ) : null}
 
         <dl className="mt-4 space-y-2.5 text-sm leading-relaxed">
           {(
