@@ -11,3 +11,6 @@ dist-ssr
 # Reference material (not part of the app)
 *.pdf
 Building Chibwe*
+
+# ...but the résumé served by the site must ship
+!public/resume.pdf
