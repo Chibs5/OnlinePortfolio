@@ -1,54 +1,96 @@
-# Chibwe Musendeka — Developer Portfolio
+# Chibwe Musendeka — Portfolio
 
-A single-page, dark-themed developer portfolio built with **React 19 + Vite +
-TypeScript + Tailwind CSS v4 + Motion (Framer Motion)**, pre-rendered to static
-HTML with **vite-react-ssg** for SEO and social link previews. Deploys to Netlify.
+My personal developer portfolio: a fast, dark-themed single-page site that presents
+my work as a **software engineer with a QA & IT-support background**. Built with
+React 19 and pre-rendered to static HTML so it loads quickly, ranks well, and shows
+proper link previews when shared.
 
-## Quick start
+**🔗 Live site: [chibwem.netlify.app](https://chibwem.netlify.app/)**
+
+![Portfolio preview](docs/preview.png)
+
+## Highlights
+
+A few of the engineering decisions behind the site:
+
+- **Build-time pre-rendering** with [`vite-react-ssg`](https://github.com/Daydreamer-riri/vite-react-ssg)
+  — routes are rendered to real HTML at build time, so crawlers and social/link-preview
+  bots see full content instead of an empty `<div id="root">`.
+- **SEO & social ready** — per-page `<title>`/description, canonical URL, Open Graph
+  and Twitter card tags, plus JSON-LD (`Person` + `WebSite`) structured data, a
+  sitemap and robots.txt.
+- **Accessible by default** — WCAG-AA colour contrast, keyboard focus styles, a skip
+  link, and full support for `prefers-reduced-motion`.
+- **Restrained motion** — subtle scroll reveals and hover micro-interactions using
+  Framer Motion, animating only GPU-composited properties and firing once.
+- **No-backend contact form** — [EmailJS](https://www.emailjs.com/) + `react-hook-form`
+  with validation, degrading gracefully to a `mailto:` link if no keys are configured.
+- **Content as data** — all copy lives in `src/data/*.ts`, so the site can be updated
+  without touching component code.
+- **Mobile-first & responsive** — a sticky sidebar/scrolling-content layout on desktop
+  that collapses cleanly to a single column on phones.
+
+## Tech stack
+
+| Area | Choice |
+| --- | --- |
+| Framework | **React 19** + **TypeScript** |
+| Build tool | **Vite** |
+| Styling | **Tailwind CSS v4** (theme tokens via `@theme`) |
+| Animation | **Motion** (Framer Motion) |
+| Pre-rendering | **vite-react-ssg** (static HTML output) |
+| Contact form | **@emailjs/browser** + **react-hook-form** |
+| Icons | **lucide-react** |
+| Fonts | **Inter** + **JetBrains Mono** (self-hosted via Fontsource) |
+| Hosting | **Netlify** |
+
+## Getting started
+
+Prerequisites: **Node.js 20+**.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
-npm run build      # pre-renders to /dist (static HTML)
-npm run preview    # preview the production build
+npm run dev        # start the dev server → http://localhost:5173
+npm run build      # pre-render to /dist (static HTML)
+npm run preview    # preview the production build locally
 ```
 
 ## Project structure
 
 ```
 src/
-  data/          # ← EDIT CONTENT HERE (profile, experience, projects, skills, certs)
-  components/    # sections + layout + motion primitives
+  data/          # site content: profile, experience, projects, skills, certifications
+  components/    # sections, layout (Sidebar), SEO, and motion primitives
   App.tsx        # sticky Sidebar + scrolling <main>
   main.tsx       # vite-react-ssg entry
+public/          # static assets (résumé, headshot, favicon, robots, sitemap)
 ```
 
-All copy lives in `src/data/*.ts` — update those files to refresh content without
-touching components.
+Content is centralised in `src/data/*.ts` — edit those files to update the copy.
 
-## TODO — assets & details to supply
+## Environment variables
 
-Search the codebase for `TODO(Chibwe)` and fill in:
+The contact form uses EmailJS. Copy `.env.example` to `.env` and provide:
 
-- **Social URLs** — GitHub & LinkedIn in `src/data/profile.ts`.
-- **Résumé** — drop your PDF at `public/resume.pdf`.
-- **Headshot** — add `public/headshot.webp` (square, ~400×400). A placeholder
-  shows until then.
-- **Project screenshots** — add `public/projects/next-transit.webp`,
-  `mwasue.webp`, `wcfb-erp.webp` (16:10). Placeholders show until then.
-- **Project links** — live demo + repo URLs in `src/data/projects.ts`.
-- **Metrics** — firm up the case-study Impact lines with real numbers.
-- **OG image** — add `public/og-image.png` (1200×630) for social previews.
-- **Site URL** — set your final domain in `src/data/profile.ts` (`siteUrl`),
-  `public/robots.txt`, and `public/sitemap.xml`.
+```
+VITE_EMAILJS_SERVICE_ID=...
+VITE_EMAILJS_TEMPLATE_ID=...
+VITE_EMAILJS_PUBLIC_KEY=...
+```
 
-## Contact form (EmailJS)
+Without these, the form falls back to opening the visitor's email client, so it never
+breaks. For the deployed site, the same variables are set in Netlify's environment
+settings.
 
-Copy `.env.example` to `.env` and add your EmailJS keys. Without them, the form
-falls back to a `mailto:` link so it still works.
+## Deployment
 
-## Deploy (Netlify)
+Hosted on **Netlify**, configured via `netlify.toml`:
 
-Push to GitHub and connect the repo to Netlify. Build settings are in
-`netlify.toml` (`npm run build` → publish `dist/`). Set the three
-`VITE_EMAILJS_*` variables in Netlify's environment settings.
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Auto-deploys on every push to `main`.
+
+## License & usage
+
+Personal portfolio © Chibwe Musendeka. The source is public for reference and
+learning — please don't reuse it wholesale as your own portfolio.
