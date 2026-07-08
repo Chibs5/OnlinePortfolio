@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="mt-16 border-t border-navy-800 pt-8 pb-10 text-sm text-ink-400">
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="mono">
-          Built by {profile.name} · React, Vite &amp; Tailwind · Deployed on Netlify
+          Built by {profile.name} · React, Vite &amp; Tailwind
         </p>
         <ul className="flex items-center gap-5">
           <li>

@@ -36,8 +36,8 @@ export function About() {
           <figure className="mx-auto w-40 shrink-0 sm:mx-0 sm:w-44">
             <div className="group relative">
               <img
-                src="/headshot.webp"
-                alt={`Portrait of the developer`}
+                src="/headshot.jpg"
+                alt="Chibwe Musendeka"
                 loading="lazy"
                 width={176}
                 height={176}
@@ -49,7 +49,7 @@ export function About() {
                 }}
               />
               <div className="hidden aspect-square w-full items-center justify-center rounded-lg border border-dashed border-navy-600 bg-navy-800 text-center text-xs text-ink-400">
-                Add /public/headshot.webp
+                Add /public/headshot.jpg
               </div>
               <span className="absolute inset-0 z-0 translate-x-3 translate-y-3 rounded-lg border border-accent/60" />
             </div>
