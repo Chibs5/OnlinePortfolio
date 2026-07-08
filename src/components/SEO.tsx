@@ -1,9 +1,9 @@
 import { Head } from 'vite-react-ssg';
 import { profile } from '@/data/profile';
 
-const title = `${profile.name} — Full-Stack Developer (React) with a QA background`;
+const title = `${profile.name} — Software Engineer with a QA & IT-support background`;
 const description =
-  'Chibwe Musendeka is a full-stack web developer in Ndola, Zambia, building fast, accessible React apps with a QA and IT-support background. See featured projects, experience, and skills.';
+  'Chibwe Musendeka is a software engineer in Ndola, Zambia who builds reliable software across the stack, works comfortably across a range of programming languages and frameworks, and brings a QA and IT-support background. See projects, experience, and skills.';
 const ogImage = `${profile.siteUrl}/og-image.png`;
 
 // JSON-LD structured data (playbook §4): Person + WebSite
@@ -14,7 +14,7 @@ const jsonLd = {
       '@type': 'Person',
       name: profile.name,
       url: profile.siteUrl,
-      jobTitle: 'Full-Stack Developer',
+      jobTitle: 'Software Engineer',
       email: `mailto:${profile.email}`,
       address: {
         '@type': 'PostalAddress',
@@ -22,7 +22,7 @@ const jsonLd = {
         addressCountry: 'ZM',
       },
       sameAs: [profile.socials.github, profile.socials.linkedin],
-      knowsAbout: ['React', 'JavaScript', 'TypeScript', 'Python', 'Quality Assurance', 'IT Support'],
+      knowsAbout: ['JavaScript', 'TypeScript', 'Python', 'Java', 'PHP', 'React', 'Node.js', 'Quality Assurance', 'IT Support'],
     },
     {
       '@type': 'WebSite',

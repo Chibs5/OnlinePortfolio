@@ -60,7 +60,7 @@ export function Contact() {
     <Section id="contact" num="06" title="Get in touch">
       <Reveal>
         <p className="max-w-xl leading-relaxed text-ink-300">
-          I'm open to full-stack developer and QA roles, freelance projects, and remote
+          I'm open to software engineering and QA roles, freelance projects, and remote
           collaboration. Whether you have a question or just want to say hi, my inbox is open —
           I'll get back to you.
         </p>

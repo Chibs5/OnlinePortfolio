@@ -1,10 +1,10 @@
 export const profile = {
   name: 'Chibwe Musendeka',
   // Playbook §1: specific role headline, not "passionate developer"
-  headline: 'Full-Stack Developer with a QA & IT-support backbone',
+  headline: 'Software Engineer with a QA & IT-support backbone',
   // One-line value proposition
   tagline:
-    'I build fast, accessible web apps with React and because I came up through QA and IT support, I know how to test, debug, and support them in production.',
+    'I build reliable software across the stack and because I came up through QA and IT support, I know how to test, debug, and support it in production.',
   location: 'Ndola, Zambia',
   email: 'chibwemusendeka@gmail.com',
   phone: '+260 967 528 035',
@@ -34,19 +34,19 @@ export const navItems = [
 
 // About section — first person, ~120 words, ends implicitly with a CTA (playbook p.6)
 export const aboutParagraphs = [
-  "I'm a full-stack web developer based in Ndola, Zambia. I build fast, accessible web applications with React, Vite, and Tailwind — and because I came up through QA and IT support, I don't just ship features, I make sure they actually work in production.",
+  "I'm a software engineer based in Ndola, Zambia. I enjoy building reliable software across the stack and picking the right language for the problem. I work comfortably with a number of programming languages and frameworks, and I'm always willing to learn more. Because I came up through QA and IT support, I don't just ship features, I make sure they actually work in production.",
   "That background is deliberate. Testing enterprise ERP systems, reproducing and documenting defects, and supporting real end-users taught me to write code that's testable, observable, and reliable. I read a feature as much through how it can break as how it should work.",
-  "Recently I built Next Transit, a smart bus-booking platform, and a business site for MWASUE Investment LTD. I care about clean code, thorough testing, and solving real problems for real users.",
+  "I care about clean, maintainable code, thorough testing, and solving real problems for real users, and I'm always broadening the tools and languages I reach for. Take a look at what I've built below.",
 ];
 
 // Short list rendered under the About text
 export const coreTech = [
-  'React',
   'JavaScript / TypeScript',
-  'Node.js',
   'Python',
+  'Java',
   'PHP',
+  'React',
+  'Node.js',
   'MySQL',
-  'Tailwind CSS',
   'Git & GitHub',
 ];
